@@ -1,6 +1,6 @@
-let splitInput = require('../src/getFoodDetails').splitInput;
-let getOtherDetails = require('../src/getFoodDetails').getOtherDetails;
-let getFoodDetails = require('../src/getFoodDetails').getFoodDetails;
+const splitInput = require('../src/getFoodDetails').splitInput;
+const getOtherDetails = require('../src/getFoodDetails').getOtherDetails;
+const getFoodDetails = require('../src/getFoodDetails').getFoodDetails;
 
 describe('getFoodDetails', function () {
   it('getFoodDetails', function() {

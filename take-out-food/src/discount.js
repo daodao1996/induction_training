@@ -1,4 +1,4 @@
-var loadPromotions = require('./promotions');
+const loadPromotions = require('./promotions');
 
 let discount = function (foodDetails) {
   let promotionMethod;

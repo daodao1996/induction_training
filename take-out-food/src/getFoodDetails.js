@@ -1,4 +1,4 @@
-var loadAllItems = require('./items');
+const loadAllItems = require('./items');
 
 let getFoodDetails = function (selectedItems) {
     let foodDetails = splitInput(selectedItems);

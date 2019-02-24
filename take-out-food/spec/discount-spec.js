@@ -1,6 +1,7 @@
-var discount = require('../src/discount').discount;
-var discount30Minus6 = require('../src/discount').discount30Minus6;
-var discountHalfPrice = require('../src/discount').discountHalfPrice;
+const discount = require('../src/discount').discount;
+const discount30Minus6 = require('../src/discount').discount30Minus6;
+const discountHalfPrice = require('../src/discount').discountHalfPrice;
+
 describe('discount', function () {
   it('The food selected by the customer meets both two discount,the final discount is 满30减6元', function() {
     let inputs = [

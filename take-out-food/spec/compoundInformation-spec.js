@@ -1,4 +1,4 @@
-let compoundInformation = require('../src/compoundInformation');
+const compoundInformation = require('../src/compoundInformation');
 
 describe('compoundInformation', function () {
   it('Use a discount of 指定菜品半价', function() {
