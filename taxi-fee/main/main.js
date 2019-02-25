@@ -1,4 +1,11 @@
-module.exports = function main(distance,parkingTime) {
+const TAXI_BASIC_FEE = 6;
+const TAXI_BASIC_DISTANCE = 2;
+const PRICE_INCREASE_KILOMETERS = 8;
+const FARE_WITHIN_PRICE_INCREASE_KM = 0.8;
+const FARE_RATIO_OVER_PRICE_INCREASE_KM = 0.5;
+const PARKING_WAITING_FEE = 0.25;
+
+module.exports = function calculateTaxiFare(distance,parkingTime) {
   if(distance<0){
     return 0;
   }else{
@@ -6,20 +13,21 @@ module.exports = function main(distance,parkingTime) {
   }
 };
 
-let calculateFreightRates = function (distance) {
-  if(distance <= 2){
-    return 6;
-  }else if(distance <= 8){
-    return 6 + (distance - 2) * 0.8;
+const calculateFreightRates = function (distance) {
+  if(distance <= TAXI_BASIC_DISTANCE){
+    return TAXI_BASIC_FEE;
+  }else if(distance <= PRICE_INCREASE_KILOMETERS){
+    return TAXI_BASIC_FEE + (distance - TAXI_BASIC_DISTANCE) * FARE_WITHIN_PRICE_INCREASE_KM;
   }else{
-    return 10.8 + (distance-8) * 0.8 * 1.5;
+    return (TAXI_BASIC_FEE + (PRICE_INCREASE_KILOMETERS-TAXI_BASIC_DISTANCE) * FARE_WITHIN_PRICE_INCREASE_KM)
+     + (distance-PRICE_INCREASE_KILOMETERS) * FARE_WITHIN_PRICE_INCREASE_KM * (1+FARE_RATIO_OVER_PRICE_INCREASE_KM);
   }
 }
 
-let calculateParkingTimeRates = function (parkingTime) {
+const calculateParkingTimeRates = function (parkingTime) {
   if(parkingTime<0){
     return 0;
   }else{
-    return parkingTime*0.25;
+    return parkingTime * PARKING_WAITING_FEE;
   }
 }
