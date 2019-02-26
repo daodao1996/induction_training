@@ -1,0 +1,305 @@
+/* font */
+ @font-face {
+   font-family: "Amatica SC";
+   src: url("./font/Amaticsc.ttf");
+   }
+
+/* common style */
+h1{
+  font-size: 52pt;
+  color:#fcf9f4;
+  font-family: "Amatica SC",cursive;
+  margin-bottom: 0px;
+}
+
+p{
+  margin:32px 0;
+  line-height: 40px;
+}
+
+button{
+  width: 300px;
+  height: 60px;
+  border: 0px;
+  border-radius: 5px;
+}
+
+p,button{
+  font-size: 20pt;
+  color:#fcf9f4;
+  font-family: "Open Sans";
+}
+
+.students,.tutors,.partners,footer{
+  display: flex;
+  align-items: center;
+}
+
+
+body{
+  width: 1820px;
+  background: #80a8cc;
+}
+
+.wrapper {
+   margin: 110px 110px;;
+   width:1600px;
+   display: grid;
+   grid-template-rows: 100px 794px 700px 700px 700px 700px 840px 100px;
+   grid-template-columns: 1600px;
+   box-shadow:110px 110px 5px 100px #799FC2;
+}
+
+
+/* header */
+header{
+  background: #fcf9f4;
+  display: grid;
+  grid-template-rows: 100px;
+  grid-template-columns: 400px 800px 400px;
+}
+
+.logo img {
+  position: absolute;
+  height: 100px;
+  margin-left: 218px;
+}
+
+nav{
+  border-right: 2px solid #eae7e2;
+  border-left: 2px solid #eae7e2;
+}
+nav > .container{
+  height: 100px;
+  margin:0 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav> .container > a{
+  display: block;
+  flex-grow: 0;
+  text-decoration:none;
+  color:#83828c;
+  font-size: 15pt;
+  font-family:"Open Sans";
+  font-weight: normal;
+}
+
+nav > .container > a:active {
+  text-decoration:none;
+  color:#d8d6d5;
+}
+
+.donate{
+  display: flex;
+  align-items: center;
+}
+
+.donate button{
+  border:2px solid #dad7d2;
+  border-radius: 3px;
+  background: transparent;
+  width: 150px;
+  height: 40px;
+  color: #4d4e59;
+  font-family: "黑体";
+  font-weight: bold;
+  font-size: 18pt;
+  margin-left: 42px;
+}
+
+
+
+/* section:online tutoring.Always free and available. */
+.onlineTutoring{
+  background-size:100%;
+  background-image: url('./img/class.jpg');
+  text-align: center;
+}
+
+.onlineTutoring::before{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1600px;
+  height: 794px;
+  background-color: #FFF;
+  opacity:0.1;
+}
+
+.onlineTutoring h1{
+  color:#ffffff;
+  font-size: 68pt;
+  margin-top: 300px;
+  margin-bottom: 0px;
+}
+
+.selectRoleButton{
+  position: relative;
+  margin-top: 50px;
+  font-size: 24pt;
+  font-family: "Amatica SC",cursive;
+}
+
+.selectRoleButton button{
+  width: 270px;
+  height: 60px;
+  font-size: 24pt;
+  font-family: "Amatica SC",cursive;
+  color:#fff;
+}
+
+.selectRoleButton button[name=student]{
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+.selectRoleButton button[name=tutor]{
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-radius: 5px;
+  margin-left: 30px;
+}
+
+.onlineTutoring > img{
+  position: relative;
+  top: 229px;
+}
+
+
+/* section:mission */
+.mission{
+  background: white;
+  text-align: center;
+}
+
+.mission > h1{
+  color:#4d4e59;
+  margin-top: 150px;
+  margin-bottom: 0;
+}
+
+.mission > button{
+  background: #ffcd62;
+}
+
+.mission > p,button{
+  color:#636471;
+}
+
+/* section:students */
+.students{
+  background: #91d0b1;
+}
+
+.students>img{
+  margin-left: 312px;
+}
+.students > .content{
+  margin-left: 138px;
+}
+
+.students > .content button{
+  background: #7CB69A;
+}
+
+.students aside img{
+  display: block;
+  margin:4px 100px;
+}
+
+/* section:prospective tutors */
+.tutors{
+  background: #FFCD62;
+}
+
+.tutors > .content{
+  margin-left: 300px;
+}
+
+.tutors > .content > button{
+  background: #EABC5B;
+}
+
+.tutors > img{
+  margin-left: 138px;
+}
+
+/* section:partners */
+.partners{
+  background: #80A8CC;
+}
+
+.partners > img{
+  margin-left: 300px;
+}
+
+.partners > .content{
+  margin-left: 138px;
+}
+
+.partners > .content > button{
+  background: #6D91B1;
+}
+
+/* section:our progres */
+.progress{
+  background: #fff;
+  text-align: center;
+}
+
+.progress h1{
+  color:#909094;
+  margin-top: 170px;
+}
+
+.progressPeopleNumber{
+  display: flex;
+  justify-content: space-between;
+  margin:80px 218px;
+}
+
+.displayArea{
+  width: 368px;
+  height: 350px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  border: 1px solid #eeece7;
+  border-radius: 5px;
+}
+
+.displayArea .number{
+  font-size: 72pt;
+  font-family: "Amatica SC",cursive;
+  margin-top: 80px;
+}
+
+.displayArea .kind{
+  font-size: 16pt;
+  margin-top: 70px;
+}
+
+.hours > .number,.hours > .kind{
+  color:#91d0b1;
+}
+
+.sessions > .number,.sessions > .kind{
+  color:#ffcd62;
+}
+
+.volunteer > .number,.volunteer > .kind{
+  color:#80a8cc;
+}
+
+/* footer */
+footer{
+  background: #4d4e59;
+  justify-content: center;
+}
+
+footer > p{
+  font-size: 16pt;
+}

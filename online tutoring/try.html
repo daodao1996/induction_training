@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .shadow-title {
+      text-align: center;
+      font-size: 22px;
+      height: 50px;
+      color: #fff;
+      width: 280px;
+      line-height: 50px;
+      position: relative;
+      background-color: #FEA001;
+    }
+    .shadow-title:after{
+       content: "";
+       position: absolute;
+       bottom: 5px;
+       right: 40px;
+       width: 75%;
+       height: 50%;
+       background-color: #bbb;
+       -moz-box-shadow: 0 0 10px 10px #bbb;
+       box-shadow: 0 0 10px 10px #bbb;
+       -ms-transform: skew(30deg, 4deg);
+       -moz-transform: skew(30deg, 4deg);
+       -webkit-transform: skew(30deg, 4deg);
+       -o-transform: skew(30deg, 4deg);
+       transform: skew(30deg, 4deg);
+       z-index: -1;
+     }
+
+  </style>
+</head>
+<body>
+   <div class="shadow-title">倾斜box-shadow</div>
+</body>
+</html>
